@@ -1,0 +1,97 @@
+---
+sidebar: sidebar 
+permalink: reference-new.html 
+keywords: new features, release notes, enhancements 
+summary: Cloud Volumes ONTAP 9.11.0 include un nuovo miglioramento. 
+---
+= Novità di Cloud Volumes ONTAP 9.11.0
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP 9.11.0 include un nuovo miglioramento.
+
+Ulteriori funzionalità e miglioramenti sono stati introdotti anche nelle ultime versioni di BlueXP. Vedere https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Note di rilascio di BlueXP"^] per ulteriori informazioni.
+
+
+
+== Istanze c4, m4 e r4 non più supportate (28 ottobre 2022)
+
+In AWS, i tipi di istanze c4, m4 e r4 EC2 non sono più supportati con Cloud Volumes ONTAP. Se si dispone di un sistema in esecuzione su un tipo di istanza c4, m4 o r4, è necessario passare a un tipo di istanza nella famiglia di istanze c5, m5 o r5.
+
+link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html["Scopri come modificare il tipo di istanza EC2 per Cloud Volumes ONTAP"^].
+
+Fare riferimento a. link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["Supporto NetApp"^] per ulteriori informazioni sulla fine della disponibilità e sul supporto per questi tipi di istanze.
+
+
+
+== Supporto per volumi elastici (7 giugno 2022)
+
+Il supporto per la funzionalità dei volumi elastici di Amazon EBS con un aggregato Cloud Volumes ONTAP offre performance migliori e capacità aggiuntiva, consentendo a BlueXP di aumentare automaticamente la capacità del disco sottostante in base alle necessità.
+
+Il supporto per i volumi elastici è disponibile a partire dalla versione 3.9.19 del connettore BlueXP ed è supportato con versioni Cloud Volumes ONTAP specifiche e tipi di dischi EBS specifici.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Scopri di più sul supporto per volumi elastici"^]
+
+
+
+== 9.11.0 P1 (2 maggio 2022)
+
+Cloud Volumes ONTAP 9.11.0 P1 è ora disponibile in AWS, Azure e Google Cloud. Questa versione include i seguenti miglioramenti.
+
+
+
+=== Supporto di ONTAP S3 in AWS
+
+È ora possibile fornire lo storage a oggetti S3 da Cloud Volumes ONTAP in AWS (Microsoft Azure è già supportato). Cloud Volumes ONTAP supporta S3 come opzione per lo storage scale-out, oltre ai protocolli classici basati su file come NFS e SMB.
+
+Tenere presente quanto segue:
+
+* Il caso d'utilizzo principale di ONTAP S3 con Cloud Volumes ONTAP è un archivio di oggetti generico.
+* Al momento, il protocollo S3 non è supportato con Cloud Volumes ONTAP in Google Cloud.
+* BlueXP non fornisce alcuna funzionalità di gestione per la funzionalità ONTAP S3.
+
+
+https://docs.netapp.com/us-en/ontap/object-storage-management/index.html["Scopri come configurare e gestire i servizi di storage a oggetti S3 in ONTAP"^].
+
+
+
+== Note sull'aggiornamento
+
+Leggi queste note per ulteriori informazioni sull'aggiornamento a questa release.
+
+
+
+=== Come eseguire l'upgrade
+
+Gli aggiornamenti di Cloud Volumes ONTAP devono essere completati da BlueXP. Non aggiornare Cloud Volumes ONTAP utilizzando Gestione di sistema o l'interfaccia CLI. In questo modo si può influire sulla stabilità del sistema.
+
+http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["Scopri come eseguire l'aggiornamento quando BlueXP ti notifica"^].
+
+
+
+=== Percorso di upgrade supportato
+
+È possibile eseguire l'aggiornamento a Cloud Volumes ONTAP 9.11.0 dalla versione 9.10.1. BlueXP richiederà di aggiornare i sistemi Cloud Volumes ONTAP idonei a questa versione.
+
+
+
+=== Versione richiesta del connettore
+
+BlueXP Connector deve eseguire la versione 3.9.18 o successiva per aggiornare i sistemi esistenti alla versione 9.11.0.
+
+
+TIP: Gli aggiornamenti automatici del connettore sono attivati per impostazione predefinita, pertanto dovrebbe essere in esecuzione la versione più recente.
+
+
+
+=== Downtime
+
+* L'aggiornamento di un sistema a nodo singolo porta il sistema offline per un massimo di 25 minuti, durante i quali l'i/o viene interrotto.
+* L'aggiornamento di una coppia ha è senza interruzioni e l'i/o è ininterrotto. Durante questo processo di aggiornamento senza interruzioni, ogni nodo viene aggiornato in tandem per continuare a fornire i/o ai client.
+
