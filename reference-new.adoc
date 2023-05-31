@@ -16,7 +16,7 @@ summary: Cloud Volumes ONTAP 9.11.0 include un nuovo miglioramento.
 [role="lead"]
 Cloud Volumes ONTAP 9.11.0 include un nuovo miglioramento.
 
-Ulteriori funzionalità e miglioramenti sono stati introdotti anche nelle ultime versioni di BlueXP. Vedere https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Note di rilascio di BlueXP"^] per ulteriori informazioni.
+Ulteriori funzionalità e miglioramenti sono stati introdotti anche nelle ultime versioni di BlueXP. Vedere https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Note di rilascio di BlueXP"^] per ulteriori informazioni.
 
 
 
@@ -24,7 +24,7 @@ Ulteriori funzionalità e miglioramenti sono stati introdotti anche nelle ultime
 
 In AWS, i tipi di istanze c4, m4 e r4 EC2 non sono più supportati con Cloud Volumes ONTAP. Se si dispone di un sistema in esecuzione su un tipo di istanza c4, m4 o r4, è necessario passare a un tipo di istanza nella famiglia di istanze c5, m5 o r5.
 
-link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html["Scopri come modificare il tipo di istanza EC2 per Cloud Volumes ONTAP"^].
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["Scopri come modificare il tipo di istanza EC2 per Cloud Volumes ONTAP"^].
 
 Fare riferimento a. link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["Supporto NetApp"^] per ulteriori informazioni sulla fine della disponibilità e sul supporto per questi tipi di istanze.
 
@@ -36,7 +36,7 @@ Il supporto per la funzionalità dei volumi elastici di Amazon EBS con un aggreg
 
 Il supporto per i volumi elastici è disponibile a partire dalla versione 3.9.19 del connettore BlueXP ed è supportato con versioni Cloud Volumes ONTAP specifiche e tipi di dischi EBS specifici.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Scopri di più sul supporto per volumi elastici"^]
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Scopri di più sul supporto per volumi elastici"^]
 
 
 
@@ -71,7 +71,7 @@ Leggi queste note per ulteriori informazioni sull'aggiornamento a questa release
 
 Gli aggiornamenti di Cloud Volumes ONTAP devono essere completati da BlueXP. Non aggiornare Cloud Volumes ONTAP utilizzando Gestione di sistema o l'interfaccia CLI. In questo modo si può influire sulla stabilità del sistema.
 
-http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["Scopri come eseguire l'aggiornamento quando BlueXP ti notifica"^].
+http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["Scopri come eseguire l'aggiornamento quando BlueXP ti notifica"^].
 
 
 
